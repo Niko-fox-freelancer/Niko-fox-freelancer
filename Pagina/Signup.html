@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/Signup.css">
+    <title>Registro</title>
+</head>
+<body background="C:\Users\nikol\OneDrive\Escritorio\Pagina\IMG\Fondo_signup.jpg">
+    <section>
+       
+        <br>
+        <h2>Registro</h2>
+        <form id="signupForm">
+            <strong><label>Nombre</label></strong>
+            <input type="text" placeholder="..." id="name" required autofocus>
+            <strong><label>Apellido</label></strong>
+            <input type="text" placeholder="..." id="lastname" required autofocus>
+            <strong><label>Genero</label></strong>
+            <select name="gender" id="gender">
+                <option value="nule">...</option>
+                <option value="male">Masculino</option>
+                <option value="female">Femenino</option>
+                <option value="LGTBIQ+">Otro</option>
+            </select>
+            <br>
+            <strong><label>Mail</label></strong>
+            <input type="email" placeholder="..." id="email" required>
+            <strong><label>Contraseña</label></strong>
+            <input type="password" placeholder="..." id="password" required>
+            <input type="submit" value="Registro">
+        </form>
+        <strong><p>Ya tienes una cuenta? <a href="login.html">Login</a></p></strong>
+    </section>
+    <script src="js/signup.js"></script>
+</body>
+</html>

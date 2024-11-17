@@ -1,0 +1,34 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-image: url('');
+}
+
+.caja {
+    background-color: #918b8b; 
+    padding: 20px;
+    border-radius: 8px;
+    outline: 2px solid transparent; 
+    transition: outline-color 0.3s; 
+}
+
+.caja:hover {
+    outline-color: midnightblue; 
+}
+
+.boton {
+    background-color: white; 
+    border: none; 
+    padding: 10px 20px;
+    margin: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s; 
+}
+.boton:hover {
+    background-color: midnightblue; /* Fondo azul midnight al pasar el mouse */
+    color: white; /* Texto blanco al pasar el mouse */
+}

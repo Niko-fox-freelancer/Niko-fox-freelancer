@@ -1,0 +1,196 @@
+:root {
+    --font-mono: ul-monospace, Menlo, Monaco, "Cascadia Mono", "Segoe UI Mono", 
+    "Roboto Mono", "Oxygen Mono", "Ubuntu Monospace", "Source Code Pro", 
+    "Fira Mono", "Droid Sans Mono", "Courier New", monospace;
+    --transition: all 0.1s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh; 
+    background-color: aliceblue;
+    color: rgb(14, 13, 13); 
+    font-family: var(--font-mono);
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+}
+
+section {
+    margin-top: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 2cm;
+    background-color: aliceblue;
+    border-radius: 10px;
+    border: 10px solid black; 
+    max-width: 90%; 
+    margin: 0 auto; 
+}
+
+section form input {
+    border: none;
+    padding: 0.8cm;
+    margin-bottom: 1cm;
+    outline-color: rgba(11, 98, 170, 0.774);
+}
+
+section form input[type="submit"] {
+    margin-top: 1.5cm;
+    background-color: midnightblue;
+    color: aliceblue;
+    display: inline-block;
+    margin-left: 40px;
+    font-family: var(--font-mono);
+    transition: var(--transition);
+}
+
+section form input[type="submit"] {
+    transform: scale(1.20);
+}
+
+select {
+    margin-left: 0.5px;
+    margin-right: 1px;
+    transition: transform 0.2s ease; 
+    border: 1px solid #ccc; 
+    padding: 10px; 
+    font-size: 16px; 
+    border-radius: 5px; 
+    outline: none; 
+}
+
+select:focus {
+    outline: none; 
+    border-color: blue; 
+    box-shadow: 0 0 0 2px rgba(0, 0, 255, 0.5); 
+}
+
+select:focus::after {
+    content: ''; 
+    display: block; 
+    position: absolute; 
+    top: -5px; 
+    left: 0; 
+    right: 0; 
+    height: 2px; 
+    background-color: blue; 
+    z-index: 1; 
+}
+
+section a {
+    text-decoration: none;
+    align-content: center;
+    margin-top: 1cm;
+    color: blue;
+    font-family: var(--font-mono);
+    font-size: 24px;
+}
+
+/* Media Queries para Responsividad */
+@media screen and (max-width: 768px) {
+    section {
+        padding: 1.5cm; /* Reduce el padding en pantallas más pequeñas */
+        max-width: 95%; /* Aumenta el ancho máximo para pantallas pequeñas */
+    }
+
+    section h2 {
+        font-size: 24px; /* Ajusta el tamaño del título */
+    }
+
+    section form input,
+    select {
+        padding: 0.6cm; /* Reduce el padding de los inputs y select */
+        font-size: 16px; /* Ajusta el tamaño de la fuente */
+    }
+
+    section form input[type="submit"] {
+        margin-left: 0; /* Elimina el margen izquierdo en el botón de envío */
+        width: 100%; /* Asegura que el botón ocupe el ancho completo */
+        padding: 1cm; /* Ajusta el padding del botón */
+    }
+
+    section a {
+        font-size: 18px; /* Reduce el tamaño de la fuente del enlace */
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .carousel .list .item .content {
+        padding-right: 20%;
+    }
+    .carousel .list .item .title,
+    .carousel .list .item .topic {
+        font-size: 4em; 
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .carousel .list .item .content {
+        padding-right: 10%;
+    }
+    .carousel .list .item .title,
+    .carousel .list .item .topic {
+        font-size: 3em; 
+    }
+    .carousel .list .item .buttons {
+        grid-template-columns: repeat(1, 130px); 
+        margin-top: 10px; 
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .carousel .list .item .content {
+        top: 10%; 
+    }
+    .carousel .list .item .title,
+    .carousel .list .item .topic {
+        font-size: 2.5em; 
+    }
+    .carousel .list .item .buttons {
+        grid-template-columns: 1fr; 
+        margin-top: 5px; 
+    }
+    .thumbnail {
+        flex-direction: column; 
+        bottom: 20px; 
+    }
+    .thumbnail .item {
+        width: 100%; 
+        height: auto;
+        max-width: 120px; 
+    }
+    .thumbnail .item img {
+        width: 100%; 
+        height: auto; 
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .carousel .list .item .content {
+        padding-right: 5%; 
+    }
+    .carousel .list .item .title,
+    .carousel .list .item .topic {
+        font-size: 2em; 
+    }
+    .arrows {
+        flex-direction: column; 
+        top: 85%; 
+        left: 50%; 
+        transform: translateX(-50%); 
+    }
+    .arrows button {
+        margin-top: 10px; 
+    }
+}
